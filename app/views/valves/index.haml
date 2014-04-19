@@ -1,0 +1,7 @@
+%table.table.table-hover.valves
+  - @valves.each do |valve|
+    %tr{:class => (valve.on? ? :info : :success), :'data-link' => valve_url(valve)}
+      %td= valve.id
+      %td= valve.name
+      %td= valve.state.to_s
+

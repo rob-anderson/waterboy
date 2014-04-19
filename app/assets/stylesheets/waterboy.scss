@@ -1,0 +1,11 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+
+table.valves {
+  tr {
+    height:50px;
+    td {
+      vertical-align:middle;
+    }
+  }
+}
