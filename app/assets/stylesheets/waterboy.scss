@@ -3,9 +3,21 @@
 
 table.valves {
   tr {
+    &:hover {
+      cursor:pointer;
+    }
     height:50px;
     td {
       vertical-align:middle;
     }
+  }
+}
+
+.valve {
+  h2 {
+    text-align: center;
+  }
+  input[type=submit] {
+    width:100%;
   }
 }

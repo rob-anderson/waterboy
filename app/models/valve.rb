@@ -3,7 +3,11 @@ class Valve < ActiveRecord::Base
   class << self
 
     def all_off!
-      all.to_a.each(&:off!)
+      switch(:all, :off) && update_all(on: false)
+    end
+
+    def switch arg1, arg2
+      `water #{arg1} #{arg2}`
     end
   end
 
@@ -30,7 +34,7 @@ class Valve < ActiveRecord::Base
   private
 
   def switch state
-    `water.py #{id} #{state}`
+    self.switch id, state
   end
 
 end

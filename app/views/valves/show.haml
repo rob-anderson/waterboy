@@ -1,2 +1,3 @@
-%p= "Valve #{@valve.id} #{@valve.name}"
-= button_to "Turn #{@valve.on? ? 'off' : 'on'}", toggle_valve_path(@valve), :method => :put, :class => 'btn'
+.valve
+  %h2= "Valve #{@valve.id} #{@valve.name}"
+  = button_to "Turn #{@valve.on? ? 'off' : 'on'}", toggle_valve_path(@valve), :method => :put, :class => 'btn btn-lg btn-primary'
