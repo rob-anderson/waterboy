@@ -31,10 +31,8 @@ class Valve < ActiveRecord::Base
     on? ? off! : on!
   end
 
-  private
-
   def switch state
-    self.switch id, state
+    Valve.switch id, state
   end
 
 end

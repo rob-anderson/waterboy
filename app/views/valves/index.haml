@@ -1,7 +1,9 @@
-%table.table.table-hover.valves
-  - @valves.each do |valve|
-    %tr{:class => (valve.on? ? :info : :success), :'data-link' => valve_url(valve)}
-      %td= valve.id
-      %td= valve.name
-      %td= valve.state.to_s
+.valves
+  %table.table.table-hover
+    - @valves.each do |valve|
+      %tr{:class => (valve.on? ? :info : :success), :'data-link' => valve_url(valve)}
+        %td= valve.id
+        %td= valve.name
+        %td= valve.state.to_s
+  = button_to 'Everything off', all_off_valve_path, :method => :put, :class => 'btn btn-lg btn-danger'
 

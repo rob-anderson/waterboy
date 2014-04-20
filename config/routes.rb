@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resource :valve do
+    put 'all/off', to: :all_off
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do

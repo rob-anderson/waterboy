@@ -1,21 +1,27 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
-table.valves {
-  tr {
-    &:hover {
-      cursor:pointer;
+.valves {
+  table {
+    tr {
+      &:hover {
+        cursor:pointer;
+      }
+      height:50px;
+      td {
+        vertical-align:middle;
+      }
     }
-    height:50px;
-    td {
-      vertical-align:middle;
-    }
+  }
+  .btn-danger {
+    width:100%;
   }
 }
 
 .valve {
   h2 {
     text-align: center;
+    padding-bottom: 10px;
   }
   input[type=submit] {
     width:100%;

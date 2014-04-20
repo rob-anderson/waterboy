@@ -11,6 +11,11 @@ class ValvesController < ApplicationController
     redirect_to :action => :index
   end
 
+  def all_off
+    Valve.all_off!
+    redirect_to :action => :index
+  end
+
   private
 
   def find_valve
